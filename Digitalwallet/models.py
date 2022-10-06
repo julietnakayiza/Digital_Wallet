@@ -13,7 +13,7 @@ class Customer(models.Model):
         ('F', 'Female'),
     )
     gender = models.CharField(max_length= 15,choices= GENDER_CHOICES,null=True)
-    age = models.PositiveBigIntegerField()
+    age=models.PositiveSmallIntegerField(null=True)
     id_number = models.CharField(max_length= 15,null=True)
     nationality = models.CharField(max_length= 15,null=True)
     profile_picture = models.ImageField(upload_to= 'profile_picture/',null=True)
